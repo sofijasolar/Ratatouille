@@ -1,0 +1,14 @@
+{
+  "images" : [
+    {
+      "filename" : "ratatouille-poster-square.jpeg",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

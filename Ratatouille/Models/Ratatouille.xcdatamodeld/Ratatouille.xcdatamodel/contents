@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Area" representedClassName="Area" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String"/>
+        <attribute name="flag" optional="YES" attributeType="String"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
+        <attribute name="idIngredient" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Meal" representedClassName="Meal" syncable="YES">
+        <attribute name="area" optional="YES" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="idMeal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="instructions" optional="YES" attributeType="String"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="measurements" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <relationship name="areaRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Area"/>
+        <relationship name="categoryRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient"/>
+    </entity>
+</model>
